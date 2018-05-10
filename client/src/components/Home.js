@@ -13,13 +13,13 @@ import { getCharts } from '../actions/charts';
 import axios from 'axios';
 
 class Home extends Component {
-  state = { charts: [] }
 
   componentDidMount() {
     this.props.dispatch(getCharts())
     axios.get('/api/charts')
     .then( res => {
       this.setState({ charts: res.data })
+      console.log(res.data)
     })
     .catch( err => {
       console.log(err);
@@ -32,7 +32,8 @@ class Home extends Component {
   }
 
   displayChart = () => {
-    return this.state.charts.map( chart => {
+    return this.props.charts.map( chart => {
+      // figure out what the fuk is wrong w this
       return(
         <List>
           <h1 color='white'>

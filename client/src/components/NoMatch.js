@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { 
-  Header, 
+import {
+  Header,
   Image,
   Segment
 } from 'semantic-ui-react';
@@ -15,12 +15,12 @@ class NoMatch extends Component {
           404
         </Header>
         <br />
-        <Image centered src={Noth04} /> 
+        <Image centered src={Noth04} />
         <Header textAlign='center' as='h3'>
           Nothing here but Nothing.
           <br />
           <Link to='/'>
-            Home
+           Go Home
           </Link>
         </Header>
       </Segment>
